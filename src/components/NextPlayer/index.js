@@ -1,5 +1,7 @@
 import React from 'react';
 
-const NextPlayer = () => <p>Next player: X</p>
+import './styles.css'
+
+const NextPlayer = () => <p className="next-player">Next player: X</p>
 
 export default NextPlayer;
