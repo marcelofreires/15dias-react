@@ -10,14 +10,14 @@ class SquareCollab extends Component {
     };
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState({playerText: !this.state.playerText});
   };
 
   render() {
     return (
       <button 
-        onClick={() => this.handleClick()}
+        onClick={this.handleClick}
         className="square-collab"
       >
       {this.state.playerText ? "X" : "O"}
