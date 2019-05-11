@@ -1,5 +1,7 @@
 import React from 'react';
 
-const BoardCollab = ({ children }) => <article>{children}</article>;
+import './styles.css';
+
+const BoardCollab = ({ children }) => <article className="board-collab">{children}</article>;
 
 export default BoardCollab;
