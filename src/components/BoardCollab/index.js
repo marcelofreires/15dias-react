@@ -1,5 +1,5 @@
 import React from 'react';
 
-const BoardCollab = () => <article>Board</article>;
+const BoardCollab = ({ children }) => <article>{children}</article>;
 
 export default BoardCollab;
