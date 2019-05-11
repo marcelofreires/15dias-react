@@ -3,12 +3,9 @@ import React, { Component } from 'react';
 import './styles.css';
 
 class SquareCollab extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      playerText: true,
-    };
-  }
+  state = {
+    playerText: true,
+  };
 
   handleClick = () => {
     this.setState({playerText: !this.state.playerText});
