@@ -1,7 +1,7 @@
 import React from 'react';
 
-import SquareCollab from './components/SquareCollab';
+import BoardCollab from './components/BoardCollab';
 
-const App = () => <SquareCollab />;
+const App = () => <BoardCollab />;
 
 export default App;

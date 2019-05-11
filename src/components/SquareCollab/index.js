@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import './styles.css';
 
-const SquareCollab = () => (
-  <button className="square-collab">X</button>
-);
+class SquareCollab extends Component {
+  handleClick() {
+    console.log('click');
+  }
+
+  render() {
+    return <button onClick={this.handleClick} className="square-collab">X</button>;
+  }
+}
 
 export default SquareCollab;

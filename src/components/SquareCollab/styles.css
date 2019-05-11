@@ -6,3 +6,8 @@
   font-size: 30px;
   color: #e84394;
 }
+
+.square-collab:hover {
+  cursor: pointer;
+  color: #9713e4;
+}
