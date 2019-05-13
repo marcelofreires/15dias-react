@@ -4,11 +4,11 @@ import './styles.css';
 
 class SquareCollab extends Component {
   state = {
-    playerText: true,
+    content: "",
   };
 
   handleClick = () => {
-    this.setState({playerText: !this.state.playerText});
+    this.setState(this.state.content === "X" ? {content: "O"} : {content: "X"});
   };
 
   render() {
@@ -17,7 +17,7 @@ class SquareCollab extends Component {
         onClick={this.handleClick}
         className="square-collab"
       >
-      {this.state.playerText ? "X" : "O"}
+      {this.state.content}
       </button>
     );
   }
