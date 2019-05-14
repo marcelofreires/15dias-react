@@ -4,13 +4,9 @@ import './styles.css';
 import SquareCollab from '../SquareCollab';
 
 const squareCollabs = amountChildren => {
-  const squares = [];
+  const squares = Array(amountChildren).fill();
 
-  for(let i = 0; i < amountChildren; i++) {
-    squares.push(<SquareCollab key={i} />);
-  }
-
-  return squares;
+  return squares.map((square, i) => <SquareCollab key={i} />);
 }
 
 const BoardCollab = ({ amountChildren }) => (
