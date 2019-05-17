@@ -1,5 +1,7 @@
 import React from 'react';
 
-const GameHistory = () => <button>history button</button>;
+import './styles.css'
+
+const GameHistory = () => <button className="game-history">history button</button>;
 
 export default GameHistory;

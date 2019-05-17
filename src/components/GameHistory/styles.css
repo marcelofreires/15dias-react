@@ -1,0 +1,20 @@
+.game-history {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background-color: transparent;
+  color: #666;
+  font-size: 20px;
+  padding: 12px 8px;
+  transition: all .2s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.game-history:hover {
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+.game-history + .game-history {
+  margin-top: 10px;
+}
