@@ -21,7 +21,7 @@ class GameWrapper extends  Component {
     return (
       <main className="game-wrapper">
         <NextPlayer player={player} />
-        <BoardCollab amountChildren={9} content={player} onClick={this.handleClick} />
+        <BoardCollab amountChildren={9} player={player === "X" ? "O" : "X"} onClick={this.handleClick} />
         <GameHistory />
       </main>
     )
