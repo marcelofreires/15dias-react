@@ -9,19 +9,27 @@ import './styles.css';
 class GameWrapper extends  Component {
   state = {
     player: "X",
+    squares: Array(9).fill("")
   };
 
-  handleClick = () => {
-    this.setState(this.state.player === "X" ? {player: "O"} : {player: "X"});
+  handleClick = (i) => {
+    const { player, squares } = this.state;
+
+    !squares[i] && (squares[i] = player);
+
+    this.setState({
+      player: player === "X" ? "O" : "X",
+      squares: squares,
+    });
   };
 
   render() {
-    const { player } = this.state;
+    const { player, squares } = this.state;
     
     return (
       <main className="game-wrapper">
         <NextPlayer player={player} />
-        <BoardCollab amountChildren={9} player={player === "X" ? "O" : "X"} onClick={this.handleClick} />
+        <BoardCollab amountChildren={9} squares={squares} onClick={this.handleClick} />
         <GameHistory />
       </main>
     )

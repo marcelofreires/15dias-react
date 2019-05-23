@@ -5,24 +5,24 @@ import SquareCollab from '../SquareCollab';
 import './styles.css';
 
 class BoardCollab extends Component {
-  squareCollabs = (amountChildren, onClick, player) => {
+  squareCollabs = (amountChildren) => {
     const squares = Array(amountChildren).fill();
   
     return squares.map((square, i) => (
       <SquareCollab
         key={i}
-        onClick={onClick}
-        player={player}
+        onClick={() => this.props.onClick(i)}
+        player={this.props.squares[i]}
       />
     ));
   }
 
   render() {
-    const { amountChildren, onClick, player } = this.props;
+    const { amountChildren} = this.props;
 
     return (
       <article className="board-collab">
-        {this.squareCollabs(amountChildren, onClick, player)}
+        {this.squareCollabs(amountChildren)}
       </article>
     )
   }
