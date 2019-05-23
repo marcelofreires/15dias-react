@@ -1,7 +1,14 @@
 import React from 'react';
 
-const SquareCollab = () => (
-  <button>X</button>
+import './styles.css';
+
+const SquareCollab = ({ player, onClick }) => (
+  <button 
+    onClick={onClick}
+    className="square-collab"
+  >
+    {player}
+  </button>
 );
 
 export default SquareCollab;

@@ -1,9 +1,11 @@
 import React from 'react';
 
-import SquareCollab from './components/SquareCollab';
+import './styles.css';
+
+import GameWrapper from './components/GameWrapper';
 
 const App = () => (
-  <SquareCollab />
+  <GameWrapper />
 );
 
 export default App;
